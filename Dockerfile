@@ -1,7 +1,7 @@
 # ==========================================
 # Stage 1: Build the React Application
 # ==========================================
-FROM node:20-alpine AS builder
+FROM node:20-slim AS builder
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -23,7 +23,7 @@ RUN npm run build
 # ==========================================
 # Stage 2: Serve the Application
 # ==========================================
-FROM node:20-alpine
+FROM node:20-slim
 
 WORKDIR /app
 
